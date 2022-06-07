@@ -27,7 +27,18 @@
     <input type="text" name="nombreequipo">
 
     <p>Localidad:</p>
-    <input type="text" name="localidadequipo">
+    <select name="loca_equipo">
+                <?php
+                    mysqli_select_db($enlace, "liga");
+                    $buscarlo = "SELECT localidad_equipo, id_equipo FROM equipos";
+                    $buscarlocali = mysqli_query($enlace, $buscarlo);
+                    if (mysqli_num_rows($buscarlocali) > 0){
+                        while($fila1 = mysqli_fetch_array($buscarlocali)){
+                            echo "<option value= " .$fila1[0]. ">" .$fila1[0]. "</option>";
+                        }
+                    }
+                ?>
+        </select></p>
 
     <p>Número de Componentes:</p>
     <input type="number" name="ncomponentes">

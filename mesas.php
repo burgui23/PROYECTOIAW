@@ -30,7 +30,19 @@
     </p>
 
     <p>Localidad:</p>
-    <input type="text" name="localidad">
+    <p>
+            <select name="loca_mesa">
+                <?php
+                    mysqli_select_db($enlace, "liga");
+                    $buscarl = "SELECT localidad_mesa, dni_mesa FROM mesas";
+                    $buscarloca = mysqli_query($enlace, $buscarl);
+                    if (mysqli_num_rows($buscarloca) > 0){
+                        while($fila1 = mysqli_fetch_array($buscarloca)){
+                            echo "<option value= " .$fila1[0]. ">" .$fila1[0]. "</option>";
+                        }
+                    }
+                ?>
+        </select></p>
 
     <p>Fecha de Nacimiento:</p>
     <input type="date" name="fechanaci">
