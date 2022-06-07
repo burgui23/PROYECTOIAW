@@ -65,6 +65,46 @@
     
     mysqli_query($enlace, $equipos);
 
+    $insertlocajugador1 = "INSERT INTO jugadores(localidad_jugador) VALUES('Paradas');";
+    mysqli_query($enlace, $insertlocajugador1);
+    $insertlocajugador2 = "INSERT INTO jugadores(localidad_jugador) VALUES('Arahal');";
+    mysqli_query($enlace, $insertlocajugador2);
+    $insertlocajugador3 = "INSERT INTO jugadores(localidad_jugador) VALUES('Marchena');";
+    mysqli_query($enlace, $insertlocajugador3);
+    $insertlocajugador4 = "INSERT INTO jugadores(localidad_jugador) VALUES('La Puebla de Cazalla');";
+    mysqli_query($enlace, $insertlocajugador4);
+    $insertlocajugador5 = "INSERT INTO jugadores(localidad_jugador) VALUES('El Coronil');";
+    mysqli_query($enlace, $insertlocajugador5);
+    $insertlocajugador6 = "INSERT INTO jugadores(localidad_jugador) VALUES('Montellano');";
+    mysqli_query($enlace, $insertlocajugador6);
+    
+
+    $insertlocamesa1 = "INSERT INTO mesas(localidad_mesa) VALUES('Paradas');";
+    mysqli_query($enlace, $insertlocamesa1);
+    $insertlocamesa2 = "INSERT INTO mesas(localidad_mesa) VALUES('Arahal');";
+    mysqli_query($enlace, $insertlocamesa2);
+    $insertlocamesa3 = "INSERT INTO mesas(localidad_mesa) VALUES('Marchena');";
+    mysqli_query($enlace, $insertlocamesa3);
+    $insertlocamesa4 = "INSERT INTO mesas(localidad_mesa) VALUES('La Puebla de Cazalla');";
+    mysqli_query($enlace, $insertlocamesa4);
+    $insertlocamesa5 = "INSERT INTO mesas(localidad_mesa) VALUES('El Coronil');";
+    mysqli_query($enlace, $insertlocamesa5);
+    $insertlocamesa6 = "INSERT INTO mesas(localidad_mesa) VALUES('Montellano');";
+    mysqli_query($enlace, $insertlocamesa6);
+
+
+    $insertlocaequipo1 = "INSERT INTO equipos(localidad_equipos) VALUES('Paradas');";
+    mysqli_query($enlace, $insertlocaequipo1);
+    $insertlocaequipo2 = "INSERT INTO equipos(localidad_equipo) VALUES('Arahal');";
+    mysqli_query($enlace, $insertlocaequipo2);
+    $insertlocaequipo3 = "INSERT INTO equipos(localidad_equipo) VALUES('Marchena');";
+    mysqli_query($enlace, $insertlocaequipo3);
+    $insertlocaequipo4 = "INSERT INTO equipos(localidad_equipo) VALUES('La Puebla de Cazalla');";
+    mysqli_query($enlace, $insertlocaequipo4);
+    $insertlocaequipo5 = "INSERT INTO equipos(localidad_equipo) VALUES('El Coronil');";
+    mysqli_query($enlace, $insertlocaequipo5);
+    $insertlocaequipo6 = "INSERT INTO equipos(localidad_equipo) VALUES('Montellano');";
+    mysqli_query($enlace, $insertlocaequipo6);
 
 
 ?>
