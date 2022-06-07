@@ -16,9 +16,6 @@
 ?>
 
 <form action="" method="post">
-    <?php
-        session_start();
-    ?>
     <h1>Liga 3x3 Cele Cortés</h1>
     <h2>Registro de Equipos</h2>
 

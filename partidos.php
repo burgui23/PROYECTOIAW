@@ -44,6 +44,27 @@
     <p>Fecha del Partido:</p>
     <input type="date" name="fecha">
 
+    <p><input type="submit" name="estadistica" value="Elaborar Estadística"></p>
+
+    <?php
+                if (isset($_POST["estadistica"])){
+                mysqli_select_db($enlace, "liga");
+
+                $test = $_POST["test"];
+                $plocal = $_POST["plocal"];
+                $pvisi = $_POST["pvisi"];
+                $rlocal = $_POST["rlocal"];
+                $rvisi = $_POST["rvisi"];
+                $alocal = $_POST["alocal"];
+                $avisi = $_POST["avisi"];
+                $fecha = $_POST["fecha"];
+
+                $registro_partido = "INSERT INTO partidos(id_partido, puntoslocal, puntosvisi, reboteslocal, rebotesvisi, asistenciaslocal, asistenciasvisi, fecha_partido) VALUES('$test', $plocal, $pvisi, $rlocal, $rvisi, $alocal, $avisi, '$fecha');";
+                mysqli_query($enlace, $registro_partido);
+                }
+
+                ?>
+
 
 </form>
     
