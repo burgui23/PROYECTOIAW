@@ -19,6 +19,7 @@
     <?php
         session_start();
     ?>
+    
     <p>Código del Partido:</p>
     <input type="text" name="test" value="<?php echo rand(1,1000000000)?>">
 
