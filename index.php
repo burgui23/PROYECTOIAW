@@ -35,6 +35,12 @@
     <?php
         if(isset($_POST["partido"])){
         header ('Location: partidos.php');
+
+        } elseif(isset($_POST["mesa"])){
+            header ('Location: mesas.php');
+        }
+        elseif(isset($_POST["mesa"])){
+            header ('Location: equipos.php');
         }
     ?>
 
