@@ -17,9 +17,13 @@
 ?>
 
 <form action="" method="post">
+    <?php
+    session_start();
+    ?>
 
                 <h1>Liga 3x3 Cele Cortés</h1>
                 <h2>Inscripción de Jugadores</h2>
+                <h3>¡Inscribe a los jugadores de tu Equipo!</h3>
 
                 <p>DNI del Jugador:</p>
                 <input type="text" name="dni_jugador">
@@ -74,12 +78,12 @@
                 $nombre_ju = $_POST["nombre_ju"];
                 $apellidos_ju = $_POST["apellidos_ju"];
                 $correo_ju = $_POST["correo_ju"];
-                $netelefono_ju = $_POST["ntelefono_ju"];
+                $ntelefono_ju = $_POST["ntelefono_ju"];
                 $loca_ju = $_POST["loca_ju"];
                 $fechanaci_ju = $_POST["fechanaci_ju"];
                 $posicion = $_POST["posicion"];
 
-                $registro_ju = "INSERT INTO jugadores(dni, nombre_jugadore, apellidos_jugador, correo_jugador, ntelefono_jugador, localidad_jugador, fechanacimiento_jugador, posicion) VALUES('$dni_ju', '$nombre_ju', '$apellidos_ju', '$correo_ju', $ntelefono_ju, '$loca_ju', $fechanaci_ju, '$posicion');";
+                $registro_ju = "INSERT INTO jugadores(dni, nombre_jugadore, apellidos_jugador, correo_jugador, ntelefono_jugador, localidad_jugador, fechanacimiento_jugador, posicion) VALUES('$dni_ju', '$nombre_ju', '$apellidos_ju', '$correo_ju', $ntelefono_ju, '$loca_ju', '$fechanaci_ju', '$posicion');";
                 mysqli_query($enlace, $registro_ju);
                 }
 

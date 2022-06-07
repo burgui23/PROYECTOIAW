@@ -20,6 +20,8 @@
         session_start();
     ?>
 
+    <h1>Liga 3x3 Cele Cortés</h1>
+    <h2>Inscripción de Mesas</h2>
     <p>DNI:</p>
     <input type="text" name="dni">
 
@@ -52,6 +54,26 @@
 
     <p>Correo Electrónico:</p>
     <input type="text" name="correo" placeholder="ejemplo@gmail.com">
+
+    <p><input type="submit" name="inscribir" value="Registrar Mesa"></p>
+
+    <?php
+                if (isset($_POST["inscribir"])){
+                mysqli_select_db($enlace, "liga");
+
+                $dni = $_POST["dni"];
+                $nombre = $_POST["nombre"];
+                $apellidos = $_POST["apellidos"];
+                $loca_mesa = $_POST["loca_mesa"];
+                $fechanaci = $_POST["fechanaci"];
+                $ntelefono = $_POST["ntelefono"];
+                $correo = $_POST["correo"];
+
+                $registro_mesa = "INSERT INTO mesas(dni_mesa, nombre_mesa, apellidos_mesa, localidad_mesa, fechanacimiento_mesa, ntelefono_mesa, correo_mesa) VALUES('$dni', '$nombre', '$apellidos', '$loca_mesa', '$fechanaci', $ntelefono, '$correo');";
+                mysqli_query($enlace, $registro_mesa);
+                }
+
+                ?>
     
 
 </form>

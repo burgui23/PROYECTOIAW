@@ -16,6 +16,9 @@
 ?>
 
 <form action="" method="post">
+    <?php
+        session_start();
+    ?>
     <h1>Liga 3x3 Cele Cortés</h1>
     <h2>Registro de Equipos</h2>
 
@@ -72,6 +75,7 @@
 
                 $registro_equipos = "INSERT INTO equipos(id_equipo, nombre_equipo, categoria, ncomponentes, localidad_equipo) VALUES($id, '$nombre', '$loca', $ncomponentes, '$categoria');";
                 mysqli_query($enlace, $registro_equipos);
+                header ('Location: jugadores.php');
                 }
     ?>
 
