@@ -19,6 +19,7 @@
     <?php
         session_start();
     ?>
+
     <p>DNI:</p>
     <input type="text" name="dni">
 
@@ -35,7 +36,7 @@
     <input type="date" name="fechanaci">
 
     <p>Número de Teléfono:</p>
-    <input type="number" name="ntelefono" placeholder="ej:23">
+    <input type="text" name="ntelefono" placeholder="ej:23">
 
     <p>Correo Electrónico:</p>
     <input type="text" name="correo" placeholder="ejemplo@gmail.com">

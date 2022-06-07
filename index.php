@@ -39,7 +39,7 @@
         } elseif(isset($_POST["mesa"])){
             header ('Location: mesas.php');
         }
-        elseif(isset($_POST["mesa"])){
+        elseif(isset($_POST["equipo"])){
             header ('Location: equipos.php');
         }
     ?>
