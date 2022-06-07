@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<link rel="icon" type="image/x-icon" href="liga.jpeg">
+<link rel=con" type="image/x-icon" href="liga.jpeg">
 <head>
 <meta charset="UTF-8">
     <title>X Liga 3x3 Cele Cortés</title>
@@ -28,6 +28,7 @@
     
     <p>
         <input type="submit" name="equipo" value="Inscribir Equipo">
+        <input type="submit" name="jugador" value="Inscribir Jugadores">
         <input type="submit" name="mesa" value="Isncribir Mesa">
         <input type="submit" name="partido" value="Rellenar Estadística">
     </p>
@@ -41,6 +42,9 @@
         }
         elseif(isset($_POST["equipo"])){
             header ('Location: equipos.php');
+        }
+        elseif(isset($_POST["jugador"])){
+            header ('Location: jugadores.php');
         }
     ?>
 

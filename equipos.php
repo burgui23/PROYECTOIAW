@@ -37,7 +37,7 @@
                     $buscarlocali = mysqli_query($enlace, $buscarlo);
                     if (mysqli_num_rows($buscarlocali) > 0){
                         while($fila1 = mysqli_fetch_array($buscarlocali)){
-                            echo "<option value= " .$fila1[0]. ">" .$fila1[0]. "</option>";
+                            echo "<option value= " .$fila1[1]. ">" .$fila1[0]. "</option>";
                         }
                     }
                 ?>
@@ -72,7 +72,6 @@
 
                 $registro_equipos = "INSERT INTO equipos(id_equipo, nombre_equipo, categoria, ncomponentes, localidad_equipo) VALUES($id, '$nombre', '$loca', $ncomponentes, '$categoria');";
                 mysqli_query($enlace, $registro_equipos);
-                header ('Location: jugadores.php');
                 }
     ?>
 

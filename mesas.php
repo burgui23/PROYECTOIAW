@@ -71,6 +71,7 @@
 
                 $registro_mesa = "INSERT INTO mesas(dni_mesa, nombre_mesa, apellidos_mesa, localidad_mesa, fechanacimiento_mesa, ntelefono_mesa, correo_mesa) VALUES('$dni', '$nombre', '$apellidos', '$loca_mesa', '$fechanaci', $ntelefono, '$correo');";
                 mysqli_query($enlace, $registro_mesa);
+                echo "<p>Mesa inscrito correctamente";
                 }
 
                 ?>
