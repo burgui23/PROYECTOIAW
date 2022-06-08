@@ -4,9 +4,9 @@
 <head>
 <meta charset="UTF-8">
     <title>X Liga 3x3 Cele Cortés</title>
+    <link rel="stylesheet" href="indexx.css">
 </head>
 <body>
-
 <?php
     $host = "localhost";
     $user = "root";
@@ -23,8 +23,8 @@
 
     <h1>Bienvenidos a la Liga 3x3 Cele Cortés</h1>
     <img src="liga.jpeg">
-    <p>Bienvenidos una vez más a otro liga 3x3 organizada por el Club Baloncesto Paradas</p>
-    <p>¿Qué desea realizar?</p>
+    <h2>Bienvenidos una vez más a otra liga 3x3 organizada por el Club Baloncesto Paradas</h2>
+    <h2>¿Qué desea realizar?</h2>
     
     <p>
         <input type="submit" name="equipo" value="Inscribir Equipo">
