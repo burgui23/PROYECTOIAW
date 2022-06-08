@@ -57,7 +57,8 @@
     <p>Correo Electrónico:</p>
     <p><input type="text" name="correo" placeholder="ejemplo@gmail.com"></p>
 
-    <p><input type="submit" name="inscribir" value="Registrar Mesa"></p>
+    <p><input type="submit" name="inscribir" value="Registrar Mesa">
+    <input type="reset" value="Limpiar"></p></p>
 
     <?php
                 if (isset($_POST["inscribir"])){

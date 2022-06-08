@@ -60,6 +60,7 @@
 
     <p>
             <input type="submit" name="registrar" value="Registrar Equipo">
+            <input type="reset" value="Limpiar">
     </p>
 
     <?php

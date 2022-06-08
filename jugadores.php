@@ -73,6 +73,7 @@
                 <input type="submit" name="borrar" value="Eliminar Jugador">
                 <input type="submit" name="mostrar" value="Mostrar Datos Jugadores">
                 <input type="submit" name="buscar" value="Buscar">
+                <input type="reset" name="limpiar" value="Limpiar">
                 </div>
 
 

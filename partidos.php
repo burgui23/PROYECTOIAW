@@ -49,7 +49,8 @@
     <p>Fecha del Partido:</p>
     <p><input type="date" name="fecha"></p>
 
-    <p><input type="submit" name="estadistica" value="Elaborar Estadística"></p>
+    <p><input type="submit" name="estadistica" value="Elaborar Estadística">
+    <input type="reset" value="Limpiar"></p>
 
     <?php
                 if (isset($_POST["estadistica"])){
