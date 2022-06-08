@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Partidos</title>
+    <link rel="stylesheet" href="partidos.css">
 </head>
 <body>
 <?php
@@ -19,30 +20,34 @@
     <?php
         session_start();
     ?>
+
+    <h1>Liga 3x3 Cele Cortés</h1>
+    <h2>¡Rellena las Estadísticas!</h2>
+    <img class="foto1" src="paradas.png" alt="imagen">
     
     <p>Código del Partido:</p>
-    <input type="text" name="test" value="<?php echo rand(1,1000000000)?>">
+    <p><input type="text" name="test" value="<?php echo rand(1,1000000000)?>"></p>
 
     <p>Puntos Equipo Local:</p>
-    <input type="number" name="plocal">
+    <p><input type="number" name="plocal"></p>
 
     <p>Puntos Equipo Visitante:</p>
-    <input type="number" name="pvisi">
+    <p><input type="number" name="pvisi"></p>
 
     <p>Rebotes Equipo Local:</p>
-    <input type="number" name="rlocal">
+    <p><input type="number" name="rlocal"></p>
 
     <p>Rebotes Equipo Visitante:</p>
-    <input type="number" name="rvisi">
+    <p><input type="number" name="rvisi"></p>
 
     <p>Asistencias Equipo Local:</p>
-    <input type="number" name="alocal">
+    <p><input type="number" name="alocal"></p>
 
     <p>Asistencias Equipo Visitante:</p>
-    <input type="number" name="avisi">
+    <p><input type="number" name="avisi"></p>
 
     <p>Fecha del Partido:</p>
-    <input type="date" name="fecha">
+    <p><input type="date" name="fecha"></p>
 
     <p><input type="submit" name="estadistica" value="Elaborar Estadística"></p>
 

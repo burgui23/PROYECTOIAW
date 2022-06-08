@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mesas</title>
+    <link rel="stylesheet" href="mesas.css">
 </head>
 <body>
 <?php
@@ -22,13 +23,14 @@
 
     <h1>Liga 3x3 Cele Cortés</h1>
     <h2>Inscripción de Mesas</h2>
+    <img class="foto1" src="paradas.png" alt="imagen">
     <p>DNI:</p>
-    <input type="text" name="dni">
+    <p><input type="text" name="dni"><p>
 
     <p>Nombre Completo:</p>
     <p>
-    <input type="text" name="nombre" placeholder="Nombre">
-    <input type="text" name="apellidos" placeholder="Apellidos">
+    <p><input type="text" name="nombre" placeholder="Nombre"></p>
+    <p><input type="text" name="apellidos" placeholder="Apellidos"></p>
     </p>
 
     <p>Localidad:</p>
@@ -47,13 +49,13 @@
         </select></p>
 
     <p>Fecha de Nacimiento:</p>
-    <input type="date" name="fechanaci">
+    <p><input type="date" name="fechanaci"><p>
 
     <p>Número de Teléfono:</p>
-    <input type="text" name="ntelefono" placeholder="ej:23">
+    <p><input type="text" name="ntelefono" placeholder="ej:23"></p>
 
     <p>Correo Electrónico:</p>
-    <input type="text" name="correo" placeholder="ejemplo@gmail.com">
+    <p><input type="text" name="correo" placeholder="ejemplo@gmail.com"></p>
 
     <p><input type="submit" name="inscribir" value="Registrar Mesa"></p>
 
