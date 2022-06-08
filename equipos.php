@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Equipos</title>
+    <link rel="stylesheet" href="equipos.css">
 </head>
 <body>
 <?php
@@ -19,18 +20,21 @@
     <h1>Liga 3x3 Cele Cortés</h1>
     <h2>Registro de Equipos</h2>
 
+    <img class="foto1" src="paradas.png" alt="imagen">
+
     <?php
         session_start();
     ?>
 
     <p>Código del Equipo:</p>
-    <input type="text" name="id" value="<?php echo rand(1,1000000000)?>">
+    <p><input type="text" name="id" value="<?php echo rand(1,1000000000)?>"></p>
 
     <p>Nombre del Equipo:</p>
-    <input type="text" name="nombreequipo">
+    <p><input type="text" name="nombreequipo"></p>
 
     <p>Localidad:</p>
-    <select name="loca_equipo">
+    <div>
+        <select name="loca_equipo">
         <option value="paradas">Paradas</option>
         <option value="marchena">Marchena</option>
         <option value="arahal">Arahal</option>
@@ -38,11 +42,13 @@
         <option value="lapuebla">La Puebla de Cazalla</option>
         <option value="elcoronil">El Coronil</option>
     </select></p>
+    </div>
 
     <p>Número de Componentes:</p>
-    <input type="number" name="ncomponentes">
+    <p><input type="number" name="ncomponentes"></p>
 
     <p>Categoría</p>
+    <div>
     <select name="categoria">
         <option value="alevin">Alevin</option>
         <option value="infantil">Infantil</option>
@@ -50,6 +56,7 @@
         <option value="junior">Junior</option>
         <option value="senior">Senior</option>
     </select></p>
+    </div>
 
     <p>
             <input type="submit" name="registrar" value="Registrar Equipo">
