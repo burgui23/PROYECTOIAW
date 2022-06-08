@@ -75,6 +75,7 @@
 
                 $registro_equipos = "INSERT INTO equipos(id_equipo, nombre_equipo, categoria, ncomponentes, localidad_equipo) VALUES($id, '$nombre', '$categoria', $ncomponentes, '$loca');";
                 mysqli_query($enlace, $registro_equipos);
+                echo "<p>Equipo inscrito correctamente</p>";
                 }
 
     ?>
