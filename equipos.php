@@ -31,33 +31,29 @@
 
     <p>Localidad:</p>
     <select name="loca_equipo">
-                <?php
-                    mysqli_select_db($enlace, "liga");
-                    $buscarlo = "SELECT localidad_equipo, id_equipo FROM equipos";
-                    $buscarlocali = mysqli_query($enlace, $buscarlo);
-                    if (mysqli_num_rows($buscarlocali) > 0){
-                        while($fila1 = mysqli_fetch_array($buscarlocali)){
-                            echo "<option value= " .$fila1[1]. ">" .$fila1[0]. "</option>";
-                        }
-                    }
-                ?>
-     </select></p>
+        <option value="paradas">Paradas</option>
+        <option value="marchena">Marchena</option>
+        <option value="arahal">Arahal</option>
+        <option value="montellano">Montellano</option>
+        <option value="lapuebla">La Puebla de Cazalla</option>
+        <option value="elcoronil">El Coronil</option>
+    </select></p>
 
     <p>Número de Componentes:</p>
     <input type="number" name="ncomponentes">
 
     <p>Categoría</p>
-    <p><input type="radio" name="categoria" value="alevín"> Alevín</p>
-    <p><input type="radio" name="categoria" value="infantil"> Infantil</p>
-    <p><input type="radio" name="categoria" value="cadete"> Cadete</p>
-    <p><input type="radio" name="categoria" value="junior"> Junior</p>
-    <p><input type="radio" name="categoria" value="senior"> Senior</p>
+    <select name="categoria">
+        <option value="alevin">Alevin</option>
+        <option value="infantil">Infantil</option>
+        <option value="cadete">Cadete</option>
+        <option value="junior">Junior</option>
+        <option value="senior">Senior</option>
+    </select></p>
 
     <p>
             <input type="submit" name="registrar" value="Registrar Equipo">
-            <input type="submit" name="modificar" value="Modificar becario">
-            <input type="submit" name="eliminar" value="Eliminar becario">
-            <input type="submit" name="mostrar" value="Mostrar becarios">
+            <input type="submit" name="mostraequipos" value="Mostrar Equipos Inscritos">
     </p>
 
     <?php
@@ -70,9 +66,10 @@
                 $ncomponentes = $_POST["ncomponentes"];
                 $categoria = $_POST["categoria"];
 
-                $registro_equipos = "INSERT INTO equipos(id_equipo, nombre_equipo, categoria, ncomponentes, localidad_equipo) VALUES($id, '$nombre', '$loca', $ncomponentes, '$categoria');";
+                $registro_equipos = "INSERT INTO equipos(id_equipo, nombre_equipo, categoria, ncomponentes, localidad_equipo) VALUES($id, '$nombre', '$categoria', $ncomponentes, '$loca');";
                 mysqli_query($enlace, $registro_equipos);
                 }
+
     ?>
 
 </form>
