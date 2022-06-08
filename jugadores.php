@@ -156,7 +156,7 @@
                             mysqli_select_db($enlace, "liga");
                     
                             $consulta = "SELECT dni,nombre_jugadore,apellidos_jugador,correo_jugador,ntelefono_jugador,localidad_jugador,fechanacimiento_jugador,posicion FROM jugadores WHERE dni = '{$_POST["dni_jugador"]}'";
-                            $resultado = mysqli_query($db_connection, $consulta);
+                            $resultado = mysqli_query($enlace, $consulta);
                             if (mysqli_num_rows($resultado) > 0){
                                 while ($fila=mysqli_fetch_array($resultado)){
                         ?>
@@ -168,7 +168,7 @@
                             <p>Localidad del Jugador: <input type="text" name="local" value="<?php echo $fila[5]?>"/></p>
                             <p>Fecha de Nacimiento: <input type="date" name="fechas" value="<?php echo $fila[6]?>"/></p>
                             <p>Posición: <input type="text" name="posi" value="<?php echo $fila[7]?>"/></p>
-                            <input type="submit" name="modi" value="Modificar jugador">
+                            <p><input type="submit" name="modi" value="Modificar jugador"></p>
                     
                         <?php
                                 }
@@ -190,7 +190,7 @@
                             $fechas = $_POST["fechas"];
                             $posi = $_POST["posi"];
                     
-                            mysqli_query($enlace, "UPDATE jugadores SET nombre_jugadore = '$nom', apellidos_jugador = '$ape', correo_jugador = '$corre', ntelefono_jugador = $num, localidad_jugador = '$local', fechanacimiento_jugador = '$fechas', posicion = '$posi' WHERE codalumno = '$dni';");
+                            mysqli_query($enlace, "UPDATE jugadores SET nombre_jugadore = '$nom', apellidos_jugador = '$ape', correo_jugador = '$corre', ntelefono_jugador = $num, localidad_jugador = '$local', fechanacimiento_jugador = '$fechas', posicion = '$posi' WHERE dni = '$dni';");
                             echo "<p>Jugador modificado con éxito</p>";
                             echo "<p>Nombre --------------- " .$nom. "</p>";
                             echo "<p>Apellidos ------------ " .$ape. "</p>";

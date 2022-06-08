@@ -66,6 +66,7 @@
 
                 $registro_partido = "INSERT INTO partidos(id_partido, puntoslocal, puntosvisi, reboteslocal, rebotesvisi, asistenciaslocal, asistenciasvisi, fecha_partido) VALUES('$test', $plocal, $pvisi, $rlocal, $rvisi, $alocal, $avisi, '$fecha');";
                 mysqli_query($enlace, $registro_partido);
+                echo "<p>Estadística rellenada correctamente";
                 }
 
                 ?>
